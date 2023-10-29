@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Imagem Flexível</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar melhor a experiência &#x1F92F </p>
+
+    <picture>
+        <source srcset="imagens/paisagem-g.png" media="(min-width: 1400px)">
+        <source srcset="imagens/paisagem-m.png" media="(min-width: 780px)">
+       <img loading="lazy" src="imagens/paisagem-p.png" alt="Imagem P"> 
+       
+       <!--Importante! 
+        A tag <img loading="Lazy"> Dever ser a última na lista de imagens dentro da <picture>
+            
+        As tags <source> devem segui uma ordem de condições. Por Exemplo:
+        <source srcset="imagem-1.png" media="(min-width: 1400px)">
+        <source srcset="imagem-2.png" media="(min-width: 768px)">
+    
+        A Ordem da tag <source> influencia na prioridade das imagens.-->
+    </picture>
+
+</body>
+</html>
